@@ -1,20 +1,14 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import type * as T from 'contentlayer-stackbit-yaml-generator/dist/cli/types.js';
-
-const Page = defineDocumentType(() => ({
-    name: 'Page',
-    fields: {
-        title: { type: 'string', extensions: { stackbit: { group: 'hi', default: 'new' } } }
-    }
-}));
+import { PageLayout } from './src/contentlayer';
 
 export default makeSource({
     contentDirPath: 'content',
-    documentTypes: [Page],
+    documentTypes: [PageLayout],
     extensions: {
         stackbit: {
             dataDir: 'content/data',
-            pagesDir: 'content/pages'
-        }
-    }
+            pagesDir: 'content/pages',
+        },
+    },
 });
