@@ -1,10 +1,10 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { makeSource } from 'contentlayer/source-files';
 import type * as T from 'contentlayer-stackbit-yaml-generator/dist/cli/types.js';
-import { PageLayout } from './src/contentlayer';
+import { Config, PageLayout, ThemeStyle } from './src/contentlayer/index.js';
 
 export default makeSource({
     contentDirPath: 'content',
-    documentTypes: [PageLayout],
+    documentTypes: [Config, PageLayout, ThemeStyle],
     stackbit: {
         dataDir: 'content/data',
         pagesDir: 'content/pages',
