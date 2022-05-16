@@ -1,13 +1,6 @@
 {
-    "printWidth": 100,
-    "singleQuote": true,
-    "tabWidth": 4,
-    "overrides": [
-        {
-            "files": ["*.md", "*.yaml"],
-            "options": {
-                "tabWidth": 2
-            }
-        }
-    ]
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "all",
+  "printWidth": 120
 }
