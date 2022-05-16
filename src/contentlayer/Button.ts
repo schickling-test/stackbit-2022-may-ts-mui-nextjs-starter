@@ -6,12 +6,12 @@ export const Button = defineNestedType(() => ({
         label: {
             type: 'string',
             required: true,
-            extensions: { stackbit: { label: 'Label', initialValue: 'Learn more' } },
+            stackbit: { label: 'Label', initialValue: 'Learn more' },
         },
         url: {
             type: 'string',
             required: true,
-            extensions: { stackbit: { label: 'URL', initialValue: '/' } },
+            stackbit: { label: 'URL', initialValue: '/' },
         },
         size: {
             type: 'enum',
@@ -28,37 +28,31 @@ export const Button = defineNestedType(() => ({
         variant: {
             type: 'enum',
             options: ['contained', 'outlined', 'text'],
-            extensions: {
-                stackbit: {
-                    label: 'Size',
-                    initialValue: 'medium',
-                    group: 'styles',
-                    controlType: 'button-group',
-                    optionLabels: {
-                        contained: 'Contained',
-                        outlined: 'Outlined',
-                        text: 'Text',
-                    },
+            stackbit: {
+                label: 'Size',
+                initialValue: 'medium',
+                group: 'styles',
+                controlType: 'button-group',
+                optionLabels: {
+                    contained: 'Contained',
+                    outlined: 'Outlined',
+                    text: 'Text',
                 },
             },
         },
         color: {
             type: 'enum',
             options: ['inherit', 'primary', 'secondary'],
-            extensions: {
-                stackbit: {
-                    label: 'Color',
-                    initialValue: 'primary',
-                    group: 'styles',
-                    controlType: 'button-group',
-                },
+            stackbit: {
+                label: 'Color',
+                initialValue: 'primary',
+                group: 'styles',
+                controlType: 'button-group',
             },
         },
     },
-    extensions: {
-        stackbit: {
-            label: 'Button',
-            fieldGroups: [{ name: 'styles', label: 'Styles' }],
-        },
+    stackbit: {
+        label: 'Button',
+        fieldGroups: [{ name: 'styles', label: 'Styles' }],
     },
 }));

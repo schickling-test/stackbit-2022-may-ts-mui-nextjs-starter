@@ -5,10 +5,8 @@ import { PageLayout } from './src/contentlayer';
 export default makeSource({
     contentDirPath: 'content',
     documentTypes: [PageLayout],
-    extensions: {
-        stackbit: {
-            dataDir: 'content/data',
-            pagesDir: 'content/pages',
-        },
+    stackbit: {
+        dataDir: 'content/data',
+        pagesDir: 'content/pages',
     },
 });

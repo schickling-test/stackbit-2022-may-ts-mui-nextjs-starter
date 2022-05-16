@@ -7,34 +7,28 @@ export const Card = defineNestedType(() => ({
     fields: {
         title: {
             type: 'string',
-            extensions: {
-                stackbit: { label: 'Title', initialValue: 'Item Title' },
-            },
+            stackbit: { label: 'Title', initialValue: 'Item Title' },
         },
         text: {
             type: 'markdown',
-            extensions: { stackbit: { label: 'Text', initialValue: 'The card body text ...' } },
+            stackbit: { label: 'Text', initialValue: 'The card body text ...' },
         },
         actions: {
             type: 'list',
             of: Button,
-            extensions: {
-                stackbit: {
-                    label: 'Actions',
-                    initialValue: [{ type: 'Button', label: 'Learn More', url: '/' }],
-                },
+            stackbit: {
+                label: 'Actions',
+                initialValue: [{ type: 'Button', label: 'Learn More', url: '/' }],
             },
         },
         image: {
             type: 'nested',
             of: Image,
-            extensions: {
-                stackbit: {
-                    default: {
-                        type: 'Image',
-                        url: 'https://assets.stackbit.com/components/images/default/default-image.png',
-                        altText: 'Item image',
-                    },
+            stackbit: {
+                initialValue: {
+                    type: 'Image',
+                    url: 'https://assets.stackbit.com/components/images/default/default-image.png',
+                    altText: 'Item image',
                 },
             },
         },
