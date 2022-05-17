@@ -15,6 +15,7 @@ export const PageLayout = defineDocumentType(() => ({
       stackbit: { initialValue: initialPageSections, isPage: true, urlPath: '/{slug}', newFilePath: '{slug}.md' },
     },
   },
+  stackbit: { isPage: true, urlPath: '/{slug}', newFilePath: '{slug}.md', hideContent: true },
 }))
 
 const initialPageSections = [

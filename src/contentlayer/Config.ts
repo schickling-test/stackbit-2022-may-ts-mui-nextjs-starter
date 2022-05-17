@@ -4,6 +4,7 @@ import { Header } from './Header'
 
 export const Config = defineDocumentType(() => ({
   name: 'Config',
+  isSingleton: true,
   fields: {
     favicon: {
       type: 'string',
@@ -26,7 +27,6 @@ export const Config = defineDocumentType(() => ({
   },
   stackbit: {
     label: 'Site Configuration',
-    singleInstance: true,
     readOnly: true,
   },
 }))
