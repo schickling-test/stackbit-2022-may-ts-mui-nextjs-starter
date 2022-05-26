@@ -7,7 +7,7 @@ export const PageLayout = defineDocumentType(() => ({
     title: {
       type: 'string',
       required: true,
-      stackbit: { initialValue: 'This Is a New Page', label: 'Title' },
+      stackbit: { initialValue: 'This Is a New Page', label: 'New Title' },
     },
     sections: {
       type: 'list',

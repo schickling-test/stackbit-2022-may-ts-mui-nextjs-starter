@@ -21,7 +21,7 @@ models:
       - name: title
         required: true
         default: This Is a New Page
-        label: Title
+        label: New Title
         type: string
       - name: sections
         required: false

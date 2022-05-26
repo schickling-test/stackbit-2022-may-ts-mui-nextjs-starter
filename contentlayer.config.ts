@@ -1,19 +1,10 @@
 import 'contentlayer-stackbit-yaml-generator/types'
 import { makeSource } from 'contentlayer/source-files'
-import { Config, PageLayout, ThemeStyle } from './src/contentlayer/index.js'
+import stackbitConfig from './stackbit.config.js'
+
+import { stackbitConfigToContentlayer } from '@stackbit/some-package'
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Config, PageLayout, ThemeStyle],
-  stackbit: {
-    dataDir: 'content/data',
-    pagesDir: 'content/pages',
-    assets: {
-      referenceType: 'static',
-      staticDir: 'public',
-      uploadDir: 'images', // relative to staticDir
-      publicPath: '/',
-    },
-    styleObjectModelName: 'ThemeStyle',
-  },
+  documentTypes: stackbitConfigToContentlayer(stackbitConfig),
 })
